@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/CleanSweepFloorPlan" xmlns:tns="http://www.example.org/CleanSweepFloorPlan" elementFormDefault="qualified">
+
+
+    <element name="home" type="tns:home"></element>
+    
+    <complexType name="home">
+    	<sequence>
+    		<element name="floor" type="tns:floor" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+    
+    
+
+    
+
+    <complexType name="floor">
+    	<sequence>
+    		<element name="cell" type="tns:cell" minOccurs="1" maxOccurs="unbounded"></element>
+    	</sequence>
+    	<attribute name="level" type="int"></attribute>
+    </complexType>
+    
+    <complexType name="cell">
+    	<attribute name="xs" type="int" use="required"></attribute>
+    	<attribute name="ys" type="int" use="required"></attribute>
+    	<attribute name="ss" use="required">
+    		<simpleType>
+    			<restriction base="int">
+    				<enumeration value="1"></enumeration>
+    				<enumeration value="2"></enumeration>
+    				<enumeration value="4"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="ps" use="required">
+    		<simpleType>
+    			<restriction base="string">
+    				<pattern
+    					value="(0|1|2|4)(0|1|2|4)(0|1|2|4)(0|1|2|4)">
+    				</pattern>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="ds" use="required">
+    		<simpleType>
+    			<restriction base="int">
+    				<minInclusive value="0"></minInclusive>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="cs" type="boolean" use="required"></attribute>
+    </complexType>
+</schema>

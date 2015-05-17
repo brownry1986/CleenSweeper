@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:home xmlns:tns="http://www.example.org/CleanSweepFloorPlan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/CleanSweepFloorPlan CleanSweepFloorPlan.xsd ">
+  <tns:floor level='1'>
+	 <tns:cell xs='0' ys='0' ss='1' ps='1212' ds='0' cs='true' />
+	 <tns:cell xs='1' ys='0' ss='2' ps='1112' ds='1' cs='false' />
+	 <tns:cell xs='2' ys='0' ss='4' ps='1112' ds='2' cs='false' />
+	 <tns:cell xs='3' ys='0' ss='2' ps='2112' ds='3' cs='false' />
+  </tns:floor>
+</tns:home>
